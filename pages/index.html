@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BookFinder — Recherche de livres</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <span class="logo">📚 BookFinder</span>
+  <div>
+    <a href="index.html">Accueil</a>
+    <a href="pages/recherche.html">Recherche</a>
+    <a href="pages/suggestions.html">Suggestions</a>
+    <a href="pages/apropos.html">À propos</a>
+    <a href="pages/admin-login.html">Admin</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Trouvez votre prochaine lecture</h1>
+  <p>Recherchez un auteur et découvrez ses livres grâce à l'API Google Books.</p>
+  <form id="search-form" class="search-bar">
+    <input id="search-input" type="text" placeholder="Nom d'un auteur (ex : Victor Hugo)" autocomplete="off">
+    <div id="suggestions-dropdown" class="suggestions-dropdown"></div>
+    <button type="submit">Rechercher</button>
+  </form>
+</section>
+
+<h2 style="text-align:center;">Résultats</h2>
+<div id="results-grid" class="grid">
+  <p class="state-message">Lancez une recherche pour voir des livres apparaître ici.</p>
+</div>
+
+<footer>© 2026 BookFinder — Projet universitaire L3</footer>
+
+<script src="js/api.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>

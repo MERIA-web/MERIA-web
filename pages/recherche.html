@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recherche — BookFinder</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <span class="logo">📚 BookFinder</span>
+  <div>
+    <a href="../index.html">Accueil</a>
+    <a href="recherche.html">Recherche</a>
+    <a href="suggestions.html">Suggestions</a>
+    <a href="apropos.html">À propos</a>
+    <a href="admin-login.html">Admin</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Recherche par auteur</h1>
+  <form id="search-form" class="search-bar">
+    <input id="search-input" type="text" placeholder="Nom d'un auteur" autocomplete="off">
+    <div id="suggestions-dropdown" class="suggestions-dropdown"></div>
+    <button type="submit">Rechercher</button>
+  </form>
+</section>
+
+<div id="results-grid" class="grid"></div>
+
+<footer>© 2026 BookFinder — Projet universitaire L3</footer>
+
+<script src="../js/api.js"></script>
+<script src="../js/search.js"></script>
+</body>
+</html>
