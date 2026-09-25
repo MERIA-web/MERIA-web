@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BookFinder — Espace administrateur</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1>📚 BookFinder — Admin</h1>
+  <a href="index.html">← Retour à la recherche</a>
+</header>
+
+<main>
+
+  <!-- Formulaire de connexion -->
+  <section id="login" class="section">
+    <h2>Connexion administrateur</h2>
+    <form id="loginForm">
+      <label>Email</label>
+      <input type="email" id="loginEmail" required>
+      <label>Mot de passe</label>
+      <input type="password" id="loginPassword" required>
+      <button class="btn" type="submit">Se connecter</button>
+      <p class="msg" id="loginMsg"></p>
+    </form>
+    <p class="switch-link">Pas encore inscrit ? <a href="#" id="showRegister">Créer un compte admin</a></p>
+  </section>
+
+  <!-- Formulaire d'inscription -->
+  <section id="register" class="section">
+    <h2>Inscription administrateur (via API)</h2>
+    <form id="registerForm">
+      <label>Nom d'utilisateur</label>
+      <input type="text" id="regUsername" required>
+      <label>Email</label>
+      <input type="email" id="regEmail" required>
+      <label>Mot de passe</label>
+      <input type="password" id="regPassword" required minlength="6">
+      <button class="btn" type="submit">S'inscrire</button>
+      <p class="msg" id="registerMsg"></p>
+    </form>
+    <p class="switch-link">Déjà inscrit ? <a href="#" id="showLogin">Se connecter</a></p>
+  </section>
+
+  <!-- Tableau de bord -->
+  <section id="dashboard" class="section">
+    <div class="dash-header">
+      <h2>Gestion des suggestions</h2>
+      <button class="btn" id="logoutBtn">Déconnexion</button>
+    </div>
+
+    <form id="suggestionForm">
+      <input type="hidden" id="suggestionId">
+      <label>Auteur</label>
+      <input type="text" id="suggAuthor" required>
+      <label>Titre du livre</label>
+      <input type="text" id="suggTitle" required>
+      <label>Description</label>
+      <textarea id="suggDescription" rows="3"></textarea>
+      <label>URL de la couverture (optionnel)</label>
+      <input type="url" id="suggCover">
+      <button class="btn" type="submit">Enregistrer la suggestion</button>
+    </form>
+
+    <h3>Suggestions existantes</h3>
+    <div id="suggestionsList"></div>
+  </section>
+
+</main>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

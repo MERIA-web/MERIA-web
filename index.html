@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BookFinder — Recherche de livres par auteur</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1>📚 BookFinder</h1>
+  <a href="admin.html">Espace administrateur</a>
+</header>
+
+<main>
+  <h2>Rechercher des livres par auteur</h2>
+  <p>Saisissez le nom d'un auteur pour obtenir des propositions et suggestions de livres qu'il a écrits.</p>
+
+  <div class="search-box">
+    <input type="text" id="authorInput" placeholder="Ex: Victor Hugo, J.K. Rowling...">
+    <button id="searchBtn">Rechercher</button>
+  </div>
+
+  <div id="adminSuggestions"></div>
+
+  <h3>Résultats</h3>
+  <div id="results">
+    <p class="empty">Entrez un nom d'auteur pour voir les propositions de livres.</p>
+  </div>
+
+  <div id="selection"></div>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
